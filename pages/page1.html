@@ -32,6 +32,8 @@
          <a href="page3.html"><li>أيات</li></a> 
          <a  href="page4.html"><li>أذكار</li></a> 
           <a href="page11.html"><li>تسابيح</li></a>
+                    <a href="page20.html"><li>عداد</li></a>
+
         </ul>
         <ul>
         <a href="page13.html"><li>أدعية</li></a>
@@ -39,6 +41,8 @@
          <a href="page3.html"><li>أيات</li></a> 
          <a  href="page4.html"><li>أذكار</li></a> 
           <a href="page11.html"><li>تسابيح</li></a>
+                    <a href="page20.html"><li>عداد</li></a>
+
         </ul>
       </nav>
       <div>
@@ -54,6 +58,10 @@
           <img src="../assets/images/next.svg" alt="next" />
           <p>التالي</p>
         </div>
+      
+ <footer class="page-footer">
+  <p class="page-number">صفحة <span id="current-page"></span></p>
+</footer>
         <div class="back" id="prevBtn">
           <p>السابق</p>
           <img src="../assets/images/back.svg" alt="next" />
@@ -74,6 +82,7 @@
             حتى يصيبح.رواه الحاكم
           </h3>
           <p>(البقرة /255)</p>
+           
         </section>
         <section class="section" id="section2">
           <h2>بسم الله الرحمن الرحيم</h2>
@@ -254,6 +263,7 @@
     </div>
     <script>
       let currentSection = 0;
+      updatePageNumber()
       const sections = document.getElementsByClassName("section");
 
       sections[currentSection].style.display = "block";
@@ -264,6 +274,9 @@
         currentSection = (currentSection + 1) % sections.length;
 
         sections[currentSection].style.display = "block";
+            updatePageNumber();
+
+
       });
 
       document.getElementById("prevBtn").addEventListener("click", function () {
@@ -273,7 +286,14 @@
           (currentSection - 1 + sections.length) % sections.length;
 
         sections[currentSection].style.display = "block";
+            updatePageNumber();
+
       });
+function updatePageNumber() {
+    document.getElementById("current-page").textContent = currentSection + 1; // Adding 1 to make it 1-based instead of 0-based
+}
+   
+
     </script>
     <script src="../js/index.js"></script>
   </body>

@@ -37,14 +37,45 @@
         </ul>
       </nav>
       <div>
-        <h1>الرقية بالسنة</h1>
+        <h1>العداد  </h1>
       </div>
       <a href="../index.html"><img src="../assets/images/arrow-right.svg" alt="arrow left"></a>
     </header>
-    <main>
-      
+    <div class="counter-main">
+
+   
+    <main  id="counter-main">
+      <h1 class="counter-number" id="counter">0</h1>
     </main>
+    <button class="counter-reset" id="counter-reset">
+        تصفير العداد
+    </button>
+     </div>
     <script src="../js/index.js"></script>
+    <script>
+     // Select elements
+  const main = document.getElementById('counter-main');
+  const counter = document.getElementById('counter');
+  const resetButton = document.getElementById('counter-reset');
+
+  // Retrieve initial counter value from local storage or default to 0
+  let count = localStorage.getItem('counterValue') ? parseInt(localStorage.getItem('counterValue')) : 0;
+  counter.textContent = count; // Display the initial value
+
+  // Increment counter on main click
+  main.addEventListener('click', () => {
+    count++;
+    counter.textContent = count; // Update the displayed counter value
+    localStorage.setItem('counterValue', count); // Save the new value to local storage
+  });
+
+  // Reset counter on button click
+  resetButton.addEventListener('click', () => {
+    count = 0;
+    counter.textContent = count; // Reset the displayed counter value
+    localStorage.setItem('counterValue', count); // Save the reset value to local storage
+  });
+    </script>
 
 </body>
 </html>

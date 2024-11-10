@@ -284,3 +284,81 @@ text-align: center;
     background-color: #000;
     margin: 20px;
 }
+
+.counter-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* ارتفاع الشاشة ناقص ارتفاع الهيدر */
+}
+
+/* رقم العداد */
+.counter-number {
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+
+
+
+.counter-reset{
+    position: absolute;
+    bottom: 50px;
+    width:100%;
+    height: 50px;
+    border: none;
+    background-color: rgb(96, 0, 0);
+    color: var(--white-color);
+
+}
+
+ .grid-container1 {
+            display: grid;
+            gap: 5px;
+            padding: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            width: 98%;
+                        direction: rtl; /* Set text direction for RTL content */
+
+
+        }
+
+         .grid-item1 {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size:18px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .grid-item1 {
+                padding: 15px;
+                font-size: 16px;
+            }
+        }
+
+        .adabsection{
+            text-align: right;
+            margin: 10px;
+        }
+
+        .page-footer {
+  position: absolute;
+  bottom: 0;
+  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.page-number {
+  margin: 0;
+  direction: rtl; /* لتنسيق النص العربي من اليمين لليسار */
+}

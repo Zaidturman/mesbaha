@@ -285,12 +285,24 @@ text-align: center;
     margin: 20px;
 }
 
-.counter-main{
+.counter-main {
+    flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 80vh;
+    justify-content: center;
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* ارتفاع الشاشة ناقص ارتفاع الهيدر */
 }
+
+/* رقم العداد */
+.counter-number {
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+
+
 
 .counter-reset{
     position: absolute;
@@ -335,3 +347,18 @@ text-align: center;
             text-align: right;
             margin: 10px;
         }
+
+        .page-footer {
+  position: absolute;
+  bottom: 0;
+  margin:0 auto;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.page-number {
+  margin: 0;
+  direction: rtl; /* لتنسيق النص العربي من اليمين لليسار */
+}

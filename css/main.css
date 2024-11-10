@@ -1,0 +1,236 @@
+:root{
+    --primery-color: #22577A; 
+    --secondery-color: #38A3A5;
+    --white-color: #FFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+  
+}
+body{
+font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+header{
+    background-color: var(--primery-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem;
+    align-items: center;
+ 
+}
+
+.bgdiv{
+    display: flex;
+    color: var(--white-color);
+    height: 200px;
+        background-image: linear-gradient(#22577ade, #22577a62),
+            url("../assets/images/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-weight: 500;
+            font-size: 1.25em;
+        }
+}
+
+.grid-container{
+display: grid;
+gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+    margin: 10px;
+}
+.grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    color: var(--primery-color);
+    font-weight: 400;
+
+}
+.full{
+    grid-column: 1 / -1;}
+.last{
+    border: none;
+    background-color: #E3E3E3;
+}
+nav ul{
+   width: 100%;
+   list-style: none;
+   display: none;
+   justify-content: flex-end;
+   align-items: center; 
+
+}
+nav li {
+    height: 50px;
+
+}
+nav a{
+    height: 100%;
+    text-decoration: none;
+  
+        color: var(--white-color);
+}
+nav a:hover{
+    background-color: #306B92;
+}
+.sidebar{
+   
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999 ;
+    background-color: #306B92;
+    box-shadow: 10px 0 -10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sidebar li{
+    
+  width: 80%;
+text-align: center;
+    background-color: var(--primery-color);
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 300;
+
+}
+.sidebar li:hover {
+    background-color: #34729c;
+}
+.sidebar a {
+    width: 80%;
+    color: var(--white-color);
+    text-align: center;
+    
+}
+.sidebar img{
+    position: absolute;
+    right: 5px;
+    
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 14px;
+        background-color: #e0e0e0;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        /* عمود واحد */
+    }
+         .menu {
+             display: none;
+         }
+    
+         nav ul {
+             display: flex;
+            justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                gap: 20px;
+         }
+   
+
+}
+
+/* تصميم للأجهزة المتوسطة مثل الأجهزة اللوحية (عرض بين 600 و 1024 بكسل) */
+@media  (min-width: 1024px) {
+    body {
+        font-size: 15px;
+        background-color: #d0d0d0;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* عمودين */
+    }
+         .menu {
+             display: none;
+         }
+    
+         nav ul {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-size: 20px;
+             gap: 20px;
+
+         }
+}
+
+/* تصميم للأجهزة الكبيرة مثل أجهزة الكمبيوتر (عرض أكثر من 1024 بكسل) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px;
+        background-color: #f4f4f4;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* أربعة أعمدة */
+    }
+}
+
+.mesbaha-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:80vh;
+    align-items: center;
+}
+
+.btn{
+    position: absolute;
+    bottom: 5px;
+
+    width:97%;
+    height: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--primery-color);
+    color: var(--white-color);
+    font-size: 24px;
+    left: 0;
+
+    
+}
+.btn:hover{
+    background-color: #34729c;
+}
+.counter  {
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.span {
+    font-size: 16px;
+}
+.theker{
+    color: var(--primery-color);
+}

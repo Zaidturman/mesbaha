@@ -18,18 +18,18 @@
       <nav>
         <ul class="sidebar">
           <img src="../assets/images/close.svg" alt="close" onclick=hideSidebar()>
-          <li>أدعية</li>
-          <li>أحاديث</li>
-          <li>أيات</li>
-          <li>أذكار</li>
-          <li>تسابيح</li>
+        <a href="page13.html"><li>أدعية</li></a>
+         <a href="page2.html"><li>أحاديث</li></a> 
+         <a href="page3.html"><li>أيات</li></a> 
+         <a  href="page4.html"><li>أذكار</li></a> 
+          <a href="page11.html"><li>تسابيح</li></a>
         </ul>
-           <ul>
-          <li>أدعية</li>
-          <li>أحاديث</li>
-          <li>أيات</li>
-          <li>أذكار</li>
-          <li>تسابيح</li>
+        <ul>
+        <a href="page13.html"><li>أدعية</li></a>
+         <a href="page2.html"><li>أحاديث</li></a> 
+         <a href="page3.html"><li>أيات</li></a> 
+         <a  href="page4.html"><li>أذكار</li></a> 
+          <a href="page11.html"><li>تسابيح</li></a>
         </ul>
       </nav>
       <div>
@@ -54,6 +54,39 @@
         </div>
 
     </main>
-    <script src="../js/index.js"></script>
+    <script>
+      
+let count = 0;
+const maxCount = 33;
+const words = [
+  "سبحان الله",
+  "الحمد لله",
+  "لا إله إلا الله",
+  "الله أكبر",
+  "استغفر الله",
+];
+let currentWordIndex = 0;
+
+const counterElement = document.getElementById("counter");
+const wordElement = document.getElementById("word");
+const incrementButton = document.getElementById("increment-btn");
+
+incrementButton.addEventListener("click", () => {
+  count++;
+
+  if (count >= maxCount) {
+    count = 0; // إعادة تصفير العداد
+    currentWordIndex = (currentWordIndex + 1) % words.length; // تغيير الكلمة
+    wordElement.textContent = words[currentWordIndex];
+  }
+
+  counterElement.textContent = count;
+});
+
+    </script>
+    <script src="../js/index.js">
+
+
+    </script>
 </body>
 </html>

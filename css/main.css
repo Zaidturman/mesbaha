@@ -61,7 +61,10 @@ gap: 10px;
     text-align: right;
     color: var(--primery-color);
     font-weight: 400;
-
+    a{
+        text-decoration: none;
+        color: var(--primery-color);
+    }
 }
 .full{
     grid-column: 1 / -1;}
@@ -84,11 +87,12 @@ nav li {
 nav a{
     height: 100%;
     text-decoration: none;
-  
+  padding: 10px;
         color: var(--white-color);
 }
 nav a:hover{
     background-color: #306B92;
+    border-radius: 10px;
 }
 .sidebar{
    
@@ -103,7 +107,7 @@ nav a:hover{
     box-shadow: 10px 0 -10px rgba(0, 0, 0, 0.3);
     display: none;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start ;
     align-items: center;
 }
 
@@ -124,6 +128,7 @@ text-align: center;
     width: 80%;
     color: var(--white-color);
     text-align: center;
+    
     
 }
 .sidebar img{
@@ -233,4 +238,49 @@ text-align: center;
 }
 .theker{
     color: var(--primery-color);
+}
+
+.container{
+   text-align: center;
+   h2{
+    color: var(--primery-color);
+    text-align: right;
+    margin: 5px;
+
+   }
+   p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px;
+   }
+}
+
+.next{
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    display: flex;
+    img{
+        width: 50px;
+    }
+}
+.back {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    display: flex;
+
+    img {
+        width: 50px;
+    }
+}
+.section {
+    display: none;
+   
+}
+.line {
+    width: 90%;
+    height: 1px;
+    background-color: #000;
+    margin: 20px;
 }

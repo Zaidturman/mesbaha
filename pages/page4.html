@@ -41,10 +41,42 @@
       </div>
       <a href="../index.html"><img src="../assets/images/arrow-right.svg" alt="arrow left"></a>
     </header>
-    <main>
-      
-    </main>
+  <main class="athkar" id="athkar">
+    <h3 id="zekr-text">
+        ربنا تقبل منا انك انت السميع العليم
+    </h3>
+    <p class="hint">اضغط على الشاشة لتغيير الذكر</p>
+</main>
     <script src="../js/index.js"></script>
+    <script>
+      // مصفوفة تحتوي على مجموعة من الأذكار
+const athkar = [
+    "سبحان الله",
+    "الحمد لله",
+    "لا إله إلا الله",
+    "الله أكبر",
+    "سبحان الله وبحمده سبحان الله العظيم",
+    "لا حول ولا قوة إلا بالله",
+    "أستغفر الله",
+    "رب اغفر لي وتب علي",
+    "ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار",
+    "اللهم صل على محمد وعلى آل محمد"
+];
+
+// الحصول على العنصر الذي يعرض الذكر
+const zekrText = document.getElementById('zekr-text');
+
+// دالة لتحديث الذكر المعروض عند النقر
+function changeZekr() {
+    // اختيار ذكر عشوائي من المصفوفة
+    const randomIndex = Math.floor(Math.random() * athkar.length);
+    zekrText.textContent = athkar[randomIndex];
+}
+
+// إضافة مستمع الحدث للنقر على الصفحة
+document.addEventListener('click', changeZekr);
+
+    </script>
 
 </body>
 </html>
